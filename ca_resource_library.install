@@ -1,0 +1,17 @@
+<?php
+
+/**
+ * Implementation of hook_install().
+ */
+function ca_resource_library_install() {
+  variable_set('ca_resource_library_list_template', 'ca_resource_library_list_template_one');
+  variable_set('ca_resource_library_node_template', 'ca_resource_library_node_template_one');
+}
+
+/**
+ * Implementation of hook_uninstall().
+ */
+function ca_resource_library_uninstall() {
+  variable_del('ca_resource_library_list_template');
+  variable_del('ca_resource_library_node_template');
+}
